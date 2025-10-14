@@ -1,0 +1,16 @@
+<div class="contenedor">
+    <h1 class="title">Registrate</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="registrate()" class="registrate-form">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" formControlName="nombre" placeholder="nombre" /><br>
+
+        <label for="correo">Correo:</label>
+        <input id="correo" type="email" formControlName="correo" placeholder="nombre@gmail.com" />
+
+        <label for="contraseña">Contraeña:</label>
+        <input id="contraseña" type="password" formControlName="contraseña" placeholder="********" />
+    
+        <button type="submit" class="btn primary">Registrate</button>
+    </form>
+  </div>

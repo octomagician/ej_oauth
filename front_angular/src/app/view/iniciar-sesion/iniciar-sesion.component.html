@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <h1 class="title">Iniciar Sesión</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="ingresarBoton()" class="login-form">
+      <label for="correo">Correo:</label>
+      <input id="correo" type="email" formControlName="correo" placeholder="nombre@gmail.com" />
+  
+      <label for="contraseña">Contraeña:</label>
+      <input id="contraseña" type="password" formControlName="contraseña" placeholder="********" />
+  
+      <button type="submit" class="btn primary">Ingresar</button>
+    </form>
+  
+    <div class="separator">──────── O ────────</div>
+  
+    <button (click)="onGoogleLogin()" class="btn grande">
+      Ingresa con Google
+    </button>
+  
+    <button (click)="registrate()" class="btn link">
+      Registrate
+    </button>
+  </div>
+  

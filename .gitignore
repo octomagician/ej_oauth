@@ -1,0 +1,14 @@
+# Laravel
+back_laravel/vendor/
+back_laravel/node_modules/
+back_laravel/.env
+back_laravel/.idea/
+back_laravel/storage/logs/
+back_laravel/storage/framework/cache/
+back_laravel/storage/framework/sessions/
+
+# Angular
+front_angular/node_modules/
+front_angular/dist/
+front_angular/.angular/
+front_angular/.vscode/
