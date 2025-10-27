@@ -1,0 +1,44 @@
+<div class="perfil-container">
+  <div class="loading" *ngIf="loading">
+    <p>Cargando información del usuario...</p>
+  </div>
+
+  <div class="error" *ngIf="error && !loading">
+    <p>{{ error }}</p>
+    <button (click)="cargarInfoUsuario()" class="btn-retry">Intentar de nuevo</button>
+  </div>
+
+  <div class="usuario-info" *ngIf="usuarioInfo && !loading && !error">
+    <div class="perfil-header">
+      <h2>Perfil de Usuario</h2>
+    </div>
+    
+    <div class="usuario-card">
+      <div class="foto-container">
+        <img 
+          [src]="usuarioInfo.foto" 
+          [alt]="'Foto de ' + usuarioInfo.email"
+          class="foto-usuario"
+          (error)="$any($event.target).src = 'https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/unknown.png'"
+        />
+      </div>
+      
+      <div class="info-container">
+        <div class="campo">
+          <label>Email:</label>
+          <p>{{ usuarioInfo.email }}</p>
+        </div>
+      </div>
+
+      <div class="info-container">
+        <div class="campo">
+          <label style="text-align: center;">Whatsupp Niggers?</label>
+        </div>
+      </div>
+
+      <div class="botones-container">
+        <button (click)="volver()" class="btn-volver">Volver al inicio</button>
+      </div>
+    </div>
+  </div>
+</div>

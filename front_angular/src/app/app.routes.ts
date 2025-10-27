@@ -3,6 +3,7 @@ import { authGuard } from './guards/auth.guard';
 import { IniciarSesionComponent } from './view/iniciar-sesion/iniciar-sesion.component';
 import { PrincipalComponent } from './view/principal/principal.component';
 import { RegistrateComponent } from './view/registrate/registrate.component';
+import { PerfilUsuarioComponent } from './view/perfil-usuario/perfil-usuario.component';
 
 export const routes: Routes = [
     {
@@ -17,5 +18,9 @@ export const routes: Routes = [
     {
         path: 'registrate',
         component: RegistrateComponent,
+    },
+    {
+        path: 'perfil',
+        component: PerfilUsuarioComponent,
     },
 ];
