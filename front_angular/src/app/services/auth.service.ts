@@ -30,4 +30,9 @@ export class AuthService {
     const headers = { Authorization: `Bearer ${token}` };
     return this.http.get<UsuarioInfo>(`${this.endpoint}usuario-info`, { headers });
   }
+
+  iniciarSesionConGoogle(): void {
+    // Redirigir al endpoint de autenticación de Google
+    window.location.href = `${this.endpoint}auth/google`;
+  }
 }
