@@ -1,44 +1,64 @@
 .perfil-container {
   max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
 }
 
-.loading {
+/* --- ESTADOS --- */
+
+.loading, .error {
   text-align: center;
   padding: 40px;
+  color: #D1D7E0; 
 }
 
 .loading p {
-  font-size: 18px;
-  color: #666;
-}
-
-.error {
-  text-align: center;
-  padding: 40px;
+  font-size: 1.2rem;
+  color: #00ba22;
 }
 
 .error p {
   color: #d32f2f;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
+/* --- BOTONES --- */
+
 .btn-retry {
-  background-color: #1976d2;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  background: #00ba22; 
+  color: #15202b;
+  border: 1px solid #00ba22;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s;
 }
 
 .btn-retry:hover {
-  background-color: #1565c0;
+  background: #15202b;
+  color: #00ba22;
 }
+
+.btn-volver {
+  background: #15202b; 
+  color: #00ba22;
+  border: 1px solid #00ba22;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-volver:hover {
+  /* Hover invertido */
+  background: #00ba22;
+  color: #D1D7E0;
+}
+
+/* --- CABECERA Y TARJETA --- */
 
 .perfil-header {
   text-align: center;
@@ -46,18 +66,22 @@
 }
 
 .perfil-header h2 {
-  color: #333;
-  font-size: 28px;
+  color: #00ba22;
+  font-size: 1.8rem;
   margin: 0;
+  text-shadow: 0 0 5px #00ba22;
 }
 
 .usuario-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #15202b; 
+  border-radius: 10px;
+  border: 2px solid #00ba22;
+  box-shadow: 0 0 15px #00ba22;
   padding: 30px;
   text-align: center;
 }
+
+/* --- FOTO DE PERFIL --- */
 
 .foto-container {
   margin-bottom: 30px;
@@ -68,9 +92,11 @@
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 4px solid #00ba22; 
+  box-shadow: 0 0 8px rgba(0, 186, 34, 0.5);
 }
+
+/* --- INFORMACIÓN DE CAMPO --- */
 
 .info-container {
   text-align: left;
@@ -79,14 +105,15 @@
 .campo {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #f5f5f5;
+  background-color: #1f2a38; 
   border-radius: 8px;
+  border: 1px solid #00ba22;
 }
 
 .campo label {
   font-weight: bold;
-  color: #555;
-  font-size: 14px;
+  color: #00ba22; 
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 5px;
@@ -95,27 +122,12 @@
 
 .campo p {
   margin: 0;
-  font-size: 18px;
-  color: #333;
+  font-size: 1.1rem;
+  color: #D1D7E0;
   word-break: break-word;
 }
 
 .botones-container {
   margin-top: 30px;
   text-align: center;
-}
-
-.btn-volver {
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-volver:hover {
-  background-color: #1976d2;
 }
