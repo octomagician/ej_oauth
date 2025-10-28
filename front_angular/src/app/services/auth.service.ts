@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../interface/usuario';
 import { Observable } from 'rxjs';
 import { Registrate } from '../interface/registrate';
+import { UsuarioInfo } from '../interface/usuario-info';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,15 @@ export class AuthService {
   salir(token:string): Observable<any> {
     const headers = { Authorization: `Bearer ${token}` };
     return this.http.post(`${this.endpoint}salir`, {}, { headers });
+  }
+
+  obtenerInfoUsuario(token: string): Observable<UsuarioInfo> {
+    const headers = { Authorization: `Bearer ${token}` };
+    return this.http.get<UsuarioInfo>(`${this.endpoint}usuario-info`, { headers });
+  }
+
+  iniciarSesionConGoogle(): void {
+    // Redirigir al endpoint de autenticación de Google
+    window.location.href = `${this.endpoint}auth/google`;
   }
 }

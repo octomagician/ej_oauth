@@ -48,7 +48,8 @@ export class IniciarSesionComponent {
 
   onGoogleLogin() {
     console.log('Google login clicked');
-    // TODO: Implement Google sign-in logic
+    // Usar el método del servicio para la autenticación con Google
+    this.authService.iniciarSesionConGoogle();
   }
 
   registrate() {

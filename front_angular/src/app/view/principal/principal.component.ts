@@ -38,4 +38,8 @@ export class PrincipalComponent {
       }
       });
     }
+
+  irAPerfil() {
+    this.router.navigate(['/perfil']);
+  }
 }
