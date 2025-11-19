@@ -32,6 +32,7 @@ export class AuthService {
   }
 
   iniciarSesionConGoogle(): void {
+    console.log("redirigiendo a auth de google...");
     // Redirigir al endpoint de autenticación de Google
     window.location.href = `${this.endpoint}auth/google`;
   }
